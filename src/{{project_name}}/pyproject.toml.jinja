@@ -11,11 +11,7 @@ packages = [
 
 [tool.poetry.dependencies]
 python = "^3.8"
-{% if django_lts == 'no' %}
-Django = "^4.0.5"
-{% else %}
-Django = "^3.2.13"
-{% endif %}
+{% if django_lts == false %}Django = "^4.0.5"{% else %}Django = "^3.2.13"{% endif %}
 pytest-django = "^4.5.2"
 
 [tool.poetry.dev-dependencies]
