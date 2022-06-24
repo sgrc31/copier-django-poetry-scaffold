@@ -67,5 +67,4 @@ project_license:
   default: GPL-3.0-or-later
 
 _tasks:
-  - "cd {{ project_name }} && mkdir src"
   - "cd {{ project_name }} && poetry install"
