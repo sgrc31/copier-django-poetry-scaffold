@@ -68,4 +68,4 @@ project_license:
 
 _tasks:
   - "cd {{ project_name }} && mkdir src"
-  - "pwd"
+  - "cd {{ project_name }} && poetry install"
