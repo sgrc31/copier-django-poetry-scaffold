@@ -68,3 +68,6 @@ project_license:
 
 _tasks:
   - "cd {{ project_name }} && poetry install"
+  - "cd {{ project_name }}/src && rm -rf {{ package_name }}"
+  - "cd {{ project_name }}/src && poetry run django-admin startproject {{ package_name }} ."
+  - "cd {{ project_name }}/src/{{ package_name }} && echo '__version__ == "0.1.0"' > __init__.py"
